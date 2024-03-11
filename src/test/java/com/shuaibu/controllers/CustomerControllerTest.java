@@ -19,10 +19,14 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import java.util.Arrays;
 
+import static org.hamcrest.Matchers.containsString;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import com.shuaibu.dto.CustomerDto;
 import com.shuaibu.models.Customer;
@@ -51,12 +55,12 @@ public class CustomerControllerTest {
 
 	}
 
-	// @SuppressWarnings("null")
-    // @Test
-	// void shouldReturnDefaultMessage() throws Exception {
-	// 	this.mockMvc.perform(get("/hello")).andDo(print()).andExpect(status().isOk())
-	// 			.andExpect(content().string(containsString("Hello, Coders")));
-	// }
+	@SuppressWarnings("null")
+    @Test
+	void shouldReturnDefaultMessage() throws Exception {
+		this.mockMvc.perform(get("/hello")).andDo(print()).andExpect(status().isOk())
+				.andExpect(content().string(containsString("Hello, Coders")));
+	}
 
 	@SuppressWarnings("null")
 	@Test
