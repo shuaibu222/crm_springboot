@@ -1,0 +1,36 @@
+services:
+
+  # crm:
+  #   container_name: crm
+  #   build:
+  #     context: ./Dockerfile
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "8080:8080"
+  #   depends_on:
+  #     - postgres
+  #   networks:
+  #           - crm-network
+
+  postgres:
+    container_name: postgres
+    image: postgres
+    environment:
+      POSTGRES_USER: shuaibu
+      POSTGRES_PASSWORD: password
+      PGDATA: /data/postgres
+    volumes:
+      - db:/data/postgres
+    ports:
+      - "5332:5432" 
+    restart: unless-stopped
+#     networks:
+#       - crm-network
+
+# networks:
+#     crm-network:
+#         driver: bridge
+
+
+volumes:
+  db:
