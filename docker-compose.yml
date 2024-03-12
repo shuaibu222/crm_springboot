@@ -2,15 +2,15 @@ services:
 
   # crm:
   #   container_name: crm
-  #   build:
-  #     context: ./Dockerfile
-  #     dockerfile: Dockerfile
+  #   build: .
   #   ports:
   #     - "8080:8080"
+  #   environment:
+  #     SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5332/customers
+  #     SPRING_DATASOURCE_USERNAME: shuaibu
+  #     SPRING_DATASOURCE_PASSWORD: password
   #   depends_on:
   #     - postgres
-  #   networks:
-  #           - crm-network
 
   postgres:
     container_name: postgres
