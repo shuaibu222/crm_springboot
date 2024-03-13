@@ -25,6 +25,8 @@ spring:
           google:
             clientId: 983311459420-4m2fd5fo60dtnhd424l1p4j4njn947fm.apps.googleusercontent.com
             clientSecret: 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
-
-  main:
-    web-application-type: servlet
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG

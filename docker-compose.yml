@@ -2,13 +2,13 @@ services:
 
   # crm:
   #   container_name: crm
-  #   build: .
+  #   image: shuaibu12345/crm_springboot:latest
   #   ports:
   #     - "8080:8080"
-  #   environment:
-  #     SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5332/customers
-  #     SPRING_DATASOURCE_USERNAME: shuaibu
-  #     SPRING_DATASOURCE_PASSWORD: password
+  #   # environment:
+  #   #   SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5332/customers
+  #   #   SPRING_DATASOURCE_USERNAME: shuaibu
+  #   #   SPRING_DATASOURCE_PASSWORD: password
   #   depends_on:
   #     - postgres
 
@@ -24,12 +24,6 @@ services:
     ports:
       - "5332:5432" 
     restart: unless-stopped
-#     networks:
-#       - crm-network
-
-# networks:
-#     crm-network:
-#         driver: bridge
 
 
 volumes:

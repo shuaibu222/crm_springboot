@@ -4,4 +4,4 @@ RUN addgroup -S webapps && adduser -S crm -G webapps
 USER crm
 WORKDIR /app
 COPY target/*.jar app.jar
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+ENTRYPOINT ["java", "-jar", "/app/app.jar"]
