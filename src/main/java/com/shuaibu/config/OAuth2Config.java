@@ -18,7 +18,7 @@ public class OAuth2Config {
                 .csrf(csrf -> csrf
                         .disable())
                 .authorizeHttpRequests(requests -> requests
-                        .requestMatchers("/hello")
+                        .requestMatchers("/hello", "/api/v1/customers", "/api/v1/customers/{id}")
                         .permitAll()
                         .anyRequest()
                         .authenticated())

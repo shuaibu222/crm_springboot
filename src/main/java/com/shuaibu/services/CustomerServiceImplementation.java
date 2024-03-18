@@ -85,6 +85,7 @@ public class CustomerServiceImplementation implements ServicesInterface {
     // utils
     private CustomerDto mapToDto(Customer customer) {
         CustomerDto customerDto = new CustomerDto();
+        customerDto.setId(customer.getId());
         customerDto.setName(customer.getName());
         customerDto.setEmail(customer.getEmail());
         customerDto.setAge(customer.getAge());
@@ -93,6 +94,7 @@ public class CustomerServiceImplementation implements ServicesInterface {
 
     private Customer mapToEntity(CustomerDto customerDto) {
         Customer customer = new Customer();
+        customer.setId(customerDto.getId());
         customer.setName(customerDto.getName());
         customer.setEmail(customerDto.getEmail());
         customer.setAge(customerDto.getAge());

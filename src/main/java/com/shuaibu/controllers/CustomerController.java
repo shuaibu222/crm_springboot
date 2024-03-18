@@ -13,7 +13,7 @@ import java.util.List;
 
 
 // Presentational layer(for handling request and response. it interact with service layer)
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://crm-frontend-nextjs.vercel.app/")
 @RestController
 public class CustomerController { 
 
