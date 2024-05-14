@@ -33,7 +33,6 @@ public class CustomerServiceImplementation implements ServicesInterface {
         return customerDtos;
     }
 
-    @SuppressWarnings("null")
     @Override
     public CustomerDto getOneCustomer(Integer id) {
         Customer customer = customerRepository.findById(id)
@@ -43,7 +42,6 @@ public class CustomerServiceImplementation implements ServicesInterface {
     }
 
 
-    @SuppressWarnings("null")
     @Override
     public CustomerDto addCustomer(@Valid CustomerDto customerDto) {
 
@@ -59,7 +57,6 @@ public class CustomerServiceImplementation implements ServicesInterface {
         return customerResponse;
     }
 
-    @SuppressWarnings("null")
     @Override
     public CustomerDto updateCustomer(Integer id, CustomerDto customerDto) {
 
@@ -74,7 +71,6 @@ public class CustomerServiceImplementation implements ServicesInterface {
         return mapToDto(updatedCustomer);
     }
 
-    @SuppressWarnings("null")
     @Override
     public String deleteCustomer(Integer id){
         customerRepository.deleteById(id);
